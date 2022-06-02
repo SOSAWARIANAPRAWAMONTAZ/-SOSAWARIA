@@ -1,0 +1,15 @@
+
+```hcl
+module "dns" {
+  source = "registry.terraform.io/T-Systems-MMS/dns/azurerm"
+  dns_zone = {
+    sosawaria_tech = {
+      name                = "sosawaria.tech"
+      resource_group_name = "service-infrastructure-rg"
+    }
+    sosawaria_de = {
+      name                = "sosawaria.de"
+      resource_group_name = "service-infrastructure-rg"
+    }
+  }
+}
